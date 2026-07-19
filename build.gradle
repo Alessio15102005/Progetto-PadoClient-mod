@@ -1,0 +1,85 @@
+plugins {
+    id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+    id 'maven-publish'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+repositories {
+    // 🌟 AGGIUNTA: Diciamo a Gradle di connettersi al server ufficiale di Modrinth
+    maven { url = "https://api.modrinth.com/maven" }
+}
+
+loom {
+    splitEnvironmentSourceSets()
+
+    mods {
+        "mycustomclient" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+}
+
+dependencies {
+    // To change the versions see the gradle.properties file
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+    // Fabric API. This is technically optional, but you probably want it anyway.
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+    // --- INIZIO AGGIUNTE PER IL CLIENT ---
+    
+    // 🌟 IL NUOVO METODO: Scarichiamo le mod e le "inglobiamo" (Jar-in-Jar)
+    // usando i server ufficiali per evitare l'errore di compilazione.
+
+    // Ingloba Sodium
+    modImplementation "maven.modrinth:sodium:mc1.20.4-0.5.8"
+    include "maven.modrinth:sodium:mc1.20.4-0.5.8"
+
+    // Ingloba Lithium
+    modImplementation "maven.modrinth:lithium:mc1.20.4-0.12.1"
+    include "maven.modrinth:lithium:mc1.20.4-0.12.1"
+    
+    // --- FINE AGGIUNTE PER IL CLIENT ---
+}
+
+processResources {
+    def version = project.version
+    inputs.property "version", version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.release = 17
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+jar {
+    def projectName = project.name
+    inputs.property "projectName", projectName
+
+    from("LICENSE") {
+        rename { "${it}_$projectName"}
+    }
+}
+
+publishing {
+    publications {
+        create("mavenJava", MavenPublication) {
+            from components.java
+        }
+    }
+    repositories {}
+}

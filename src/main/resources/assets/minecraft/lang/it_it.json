@@ -1,0 +1,43 @@
+{
+  "menu.multiplayer": "Entra Nel Server",
+  "menu.options": "Opzioni",
+  "menu.quit": "Chiudi :c",
+  
+  "gui.myclient.credits.title": "Crediti",
+  "gui.myclient.general": "Generale",
+  "gui.myclient.statistics": "Statistiche",
+  "gui.myclient.credits.role": "Sviluppatore Capo",
+  "gui.myclient.credits.architecture": "Architettura Client e Sistema UI",
+  "gui.myclient.credits.builtwith": "Creato con Fabric API",
+  "gui.myclient.credits.tools": "Strumenti Utilizzati:",
+  
+  "gui.myclient.updates": "Aggiornamenti",
+  "gui.myclient.client_mods": "Modifiche Client",
+  "gui.myclient.community": "Community",
+  
+  "gui.myclient.updates.title": "Novità dell'Aggiornamento",
+  "gui.myclient.updates.version": "Versione 1.0 - Beta",
+  "gui.myclient.updates.note1": "- Interfaccia personalizzata",
+  "gui.myclient.updates.note2": "- Rimossi elementi a rischio copyright",
+  "gui.myclient.updates.note3": "- Aggiunto supporto completo per le lingue",
+  "gui.myclient.updates.note4": "- Preparazione del sistema per le Mod interne",
+
+  "hud.myclient.day": "Giorno: %s",
+
+  "gui.myclient.cosmetics.title": "Guardaroba Mantelli",
+  "gui.myclient.cosmetics.previous": "< Precedente",
+  "gui.myclient.cosmetics.next": "Successivo >",
+  "gui.myclient.cosmetics.equip": "Imposta",
+  "gui.myclient.cosmetics.back": "Indietro",
+  "gui.myclient.cosmetics.active": " (Attivo)",
+  "gui.myclient.cosmetics.preview": "Anteprima",
+  "gui.myclient.cosmetics.none": "Nessun equipaggiamento",
+
+  "gui.myclient.worlds.list": "Lista Mondi",
+  "gui.myclient.worlds.open_folder": "Apri Cartella Mondi",
+  "gui.myclient.worlds.status": "STATO CLIENT",
+  "gui.myclient.worlds.version": "▶ Versione: 1.0",
+  "gui.myclient.worlds.engine": "▶ Engine: Fabric",
+  "gui.myclient.worlds.fps_boost": "▶ FPS Boost: ATTIVO",
+  "gui.myclient.worlds.system_ready": "▶ Sistema: Pronto"
+}

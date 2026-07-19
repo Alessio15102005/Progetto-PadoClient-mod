@@ -1,0 +1,43 @@
+{
+  "menu.multiplayer": "Enter the Server",
+  "menu.options": "Options",
+  "menu.quit": "Close :c",
+  
+  "gui.myclient.credits.title": "Credits",
+  "gui.myclient.general": "General",
+  "gui.myclient.statistics": "Statistics",
+  "gui.myclient.credits.role": "Lead Developer",
+  "gui.myclient.credits.architecture": "Client Architecture & UI System",
+  "gui.myclient.credits.builtwith": "Built with Fabric API",
+  "gui.myclient.credits.tools": "Tools Used:",
+  
+  "gui.myclient.updates": "Updates",
+  "gui.myclient.client_mods": "Client Mods",
+  "gui.myclient.community": "Community",
+  
+  "gui.myclient.updates.title": "Changelog",
+  "gui.myclient.updates.version": "Version 1.0 - Beta",
+  "gui.myclient.updates.note1": "- Completely redesigned Custom UI",
+  "gui.myclient.updates.note2": "- Removed copyright-infringing assets",
+  "gui.myclient.updates.note3": "- Added full translation support",
+  "gui.myclient.updates.note4": "- Preparing system for internal Mods",
+
+  "hud.myclient.day": "Day: %s",
+
+  "gui.myclient.cosmetics.title": "Cape Wardrobe",
+  "gui.myclient.cosmetics.previous": "< Previous",
+  "gui.myclient.cosmetics.next": "Next >",
+  "gui.myclient.cosmetics.equip": "Equip",
+  "gui.myclient.cosmetics.back": "Back",
+  "gui.myclient.cosmetics.active": " (Active)",
+  "gui.myclient.cosmetics.preview": "Preview",
+  "gui.myclient.cosmetics.none": "No equipment",
+
+  "gui.myclient.worlds.list": "World List",
+  "gui.myclient.worlds.open_folder": "Open Worlds Folder",
+  "gui.myclient.worlds.status": "CLIENT STATUS",
+  "gui.myclient.worlds.version": "▶ Version: 1.0",
+  "gui.myclient.worlds.engine": "▶ Engine: Fabric",
+  "gui.myclient.worlds.fps_boost": "▶ FPS Boost: ACTIVE",
+  "gui.myclient.worlds.system_ready": "▶ System: Ready"
+}
